@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Image Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><span class="logo">✨</span> AI Image Generator</h1>
+  </header>
+  <main>
+    <section class="controls">
+      <div>
+        <label for="prompt">Describe your image:</label>
+        <input type="text" id="prompt" placeholder="e.g. A city skyline at night">
+      </div>
+      <div>
+        <label>Style Tags:</label>
+        <div class="tags">
+          <button class="tag" data-tag="anime">Anime</button>
+          <button class="tag" data-tag="colourful">Colourful</button>
+          <button class="tag" data-tag="cartoon">Cartoon</button>
+          <button class="tag" data-tag="realistic">Realistic</button>
+        </div>
+      </div>
+      <div>
+        <button id="generateBtn" class="primary">Generate Image</button>
+      </div>
+      <div>
+        <label for="importImage">Import Image (for compositing):</label>
+        <input type="file" id="importImage" accept="image/*">
+        <input type="text" id="importInstruction" placeholder="e.g. Add this waterfall in the background">
+        <button id="importBtn">Add to Picture</button>
+      </div>
+    </section>
+    <section class="canvas-section">
+      <div class="canvas-container">
+        <canvas id="imageCanvas" width="512" height="512"></canvas>
+        <div class="canvas-tools">
+          <button id="magicEraserBtn">🧹 Magic Eraser</button>
+          <button id="downloadBtn">Download</button>
+        </div>
+      </div>
+      <div id="loading" class="hidden">Generating Image...</div>
+    </section>
+  </main>
+  <footer>
+    <small>&copy; 2025 AI Image Generator UI Demo. Powered by open source & AI APIs.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
